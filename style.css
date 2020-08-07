@@ -1,0 +1,33 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html, body{
+	background: #000000;
+	height: 100%;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+.icon {
+	color: #ffffff;
+	font-size: 50vmin;
+}
+
+.text {
+	color: #ffffff;
+}
+
+h1.text{
+	font-size: 9vmin;
+}
+h2.text{
+	font-size: 6vmin;
+}
