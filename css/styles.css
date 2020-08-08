@@ -1,13 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,600);
 
-
-
 :root {
     --fbcolor: #3b5998; 
     --discordcolor: #7289d9;
     --linkedincolor: #0076a8;
     --githubcolor: #211f1f;
-    --mailcolor: #555555;
+    --mailcolor: #333;
     --bgcolor: #080808;
 }
 
@@ -33,7 +31,7 @@ html, body {
 	z-index: -1;
 }
 
-.flex-container{
+.flex-container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -75,12 +73,12 @@ h2.desc {
 	text-decoration: none;
 }
 
-.desc a{
+.desc a {
 
     position: relative;
 }
 
-.desc a::before{
+.desc a::before {
 	content: "";
 	position: absolute;
 	width: 100%;
@@ -95,14 +93,18 @@ h2.desc {
 }
 .desc a:hover::before {
   visibility: visible;
-  opacity: 0.7;
+  opacity: 0.9;
   transform: scaleX(1);
 }
+
+
+
+/* Contact Section */
+
 
 .contact{
 	margin-top: 10px
 }
-
 
 .contact ul li a i.fa-facebook-f {
     color: var(--fbcolor) !important;
@@ -127,15 +129,11 @@ h2.desc {
     list-style: none;
 }
 
+
 .contact ul li a {
-    width: 10vmin;
-    height: 10vmin;
-    font-size: 5vmin;
-    
-    /*width: 65px;
+    width: 65px;
     height: 65px;
-    font-size: 30px;
-    */
+    font-size: calc(35px);
     background-color: #ddd;
     margin: 0 2vmin;
     display: block;
@@ -145,7 +143,9 @@ h2.desc {
     border: 1vmin solid #efefef;
     z-index: 1;
     text-decoration: none;
+    transition: .5s ease-in-out;
 }
+
 .contact a .icon-container{
 	display: flex;
 	width: 100%;
@@ -161,6 +161,55 @@ h2.desc {
     z-index: 3;
 }
 
+
+.contact ul li.fb a:hover {
+    background: var(--fbcolor);
+}
+.contact ul li.linkedin a:hover {
+    background: var(--linkedincolor);
+} 
+.contact ul li.github a:hover {
+    background: var(--githubcolor);
+}
+.contact ul li.mail a:hover {
+    background: var(--mailcolor);
+}
+.contact li a:hover .icon {
+    color: #fff !important;
+    transform: rotateY(360deg);
+}
+
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+	.contact ul li a {
+    	width: 55px;
+    	height: 55px;
+    	font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+	.contact ul li a {
+    	width: 13vmin;
+    	height: 13vmin;
+    	font-size: calc(3vw + 2vh);
+
+  }
+}
+
+@media only screen and (max-height: 430px) {
+	.contact ul li a {
+		width: 50px;
+    	height: 50px;
+    	font-size: 25px;
+	}
+}
+
+
+/* 
+Glitchy Bottom to top fill transition
+
 .contact ul li a::before {
     content: "";
     position: absolute;
@@ -172,17 +221,9 @@ h2.desc {
     transition: .5s;
     z-index: 2;
 }
-
-
-.contact li a:hover .icon {
-    color: #fff !important;
-    transform: rotateY(360deg);
-}
-
 .contact ul li a:hover::before {
     top: 0;
 }
-
 
 .contact ul li.fb a::before {
     background: var(--fbcolor);
@@ -199,3 +240,4 @@ h2.desc {
 .contact ul li.mail a::before {
     background: var(--mailcolor);
 }
+*/
